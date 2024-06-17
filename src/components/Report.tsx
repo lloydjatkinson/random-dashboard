@@ -262,7 +262,7 @@ export const Report = () => {
                                 <ListItem key={item.name}>
                                     <div className="flex items-center space-x-2">
                                         <span
-                                            className={clsx(statusColor[item.name], 'h-0.5 w-3')}
+                                            className={'h-0.5 w-3'}
                                             aria-hidden={true}
                                         />
                                         <span>{item.name}</span>
@@ -345,7 +345,6 @@ export const Report = () => {
                                     <div className="flex items-center space-x-2.5 truncate">
                                         <span
                                             className={clsx(
-                                                item.color,
                                                 'h-2.5 w-2.5 shrink-0 rounded-sm',
                                             )}
                                             aria-hidden={true}
@@ -356,10 +355,10 @@ export const Report = () => {
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <span className="font-medium tabular-nums text-tremor-content-strong dark:text-dark-tremor-content-strong">
-                                            {currencyFormatter(item.amount)}
+                                            {currencyFormatter(1234)}
                                         </span>
                                         <span className="rounded-tremor-small bg-tremor-background-subtle px-1.5 py-0.5 text-tremor-label font-medium tabular-nums text-tremor-content-emphasis dark:bg-dark-tremor-background-subtle dark:text-dark-tremor-content-emphasis">
-                                            {item.share}
+                                            20%
                                         </span>
                                     </div>
                                 </ListItem>
