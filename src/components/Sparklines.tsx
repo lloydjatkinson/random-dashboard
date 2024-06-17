@@ -1,9 +1,7 @@
 // 'use client';
 import { Card, SparkAreaChart } from '@tremor/react';
+import clsx from 'clsx';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
 
 const data = [
   {
@@ -273,7 +271,7 @@ export function Sparklines() {
                 className="h-8 w-24 flex-none sm:w-28"
               />
               <div
-                className={classNames(
+                className={clsx(
                   stock.changeType === 'positive'
                     ? 'text-emerald-700 dark:text-emerald-500'
                     : 'text-red-700 dark:text-red-500',
@@ -284,7 +282,7 @@ export function Sparklines() {
                   {stock.value}
                 </span>
                 <span
-                  className={classNames(
+                  className={clsx(
                     stock.changeType === 'positive'
                       ? 'bg-emerald-100 dark:bg-emerald-400/10'
                       : 'bg-red-100 dark:bg-red-400/10',
